@@ -1,0 +1,45 @@
+{
+  "name": "zyan/detect-unicode-charset",
+  "description": "判断字串中包含中文、日文、韩文、或泰文等各国语言文字的方法",
+  "keywords": [
+    "判断字符串",
+    "字符串",
+    "字符串工具",
+    "判断包含中文",
+    "判断包含日文",
+    "判断包含韩文",
+    "判断包含泰文"
+  ],
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "读心印",
+      "email": "839024615@qq.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "Zyan\\DetectUnicodeCharset\\": "./src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Zyan\\Tests\\": "./tests/"
+    }
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.5",
+    "friendsofphp/php-cs-fixer": "^3",
+    "phpstan/phpstan": "^0.12"
+  },
+  "scripts": {
+    "phpstan": "vendor/bin/phpstan",
+    "test": "vendor/bin/phpunit --colors=always --testdox",
+    "check-style": "php-cs-fixer fix --using-cache=no --diff --config=.php-cs-fixer.dist.php --dry-run --ansi",
+    "fix-style": "php-cs-fixer fix --using-cache=no --config=.php-cs-fixer.dist.php --ansi"
+  }
+}
